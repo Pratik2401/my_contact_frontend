@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Table from "react-bootstrap/Table";
 import swal from "sweetalert";
 import api from "../utils/api";
 import "./Contacts.css";
@@ -213,51 +213,47 @@ export default function Contacts({ isLoggedIn, setisLoggedIn }) {
             <Button className="contact_btn opt_btn" onClick={createContact}>
               Create Contact
             </Button>
-            <Button className="contact_btn opt_btn" onClick={updateContact}>
-              Update Contact
-            </Button>
           </Row>
-          <Row className="headers">
-            <Col>Sr.No</Col>
-            <Col>Name</Col>
-            <Col>Email</Col>
-            <Col>Phone</Col>
-            <Col>Update</Col>
-            <Col>Delete</Col>
-          </Row>
-          {contacts.length > 0 ? (
+          <Table striped bordered hover responsive className="custom_table">
+         <thead>
+           <tr>
+             <th>Sr.No</th>
+             <th>Name</th>
+             <th>Email</th>
+             <th>Phone</th>
+             <th>Update</th>
+             <th>Delete</th>
+           </tr>
+         </thead>
+         <tbody>
+         {contacts.length > 0 ? (
             contacts.map((contact, index) => (
-              <Row key={contact} className="contact-item ">
-                <Col>{index + 1}</Col>
-                <Col>{contact.name}</Col>
-                <Col>{contact.email}</Col>
-                <Col>{contact.phone}</Col>
-                <Col>
-                  <Button
-            
-                    onClick={() => updateContact(contact._id)}
-                    className="update_btn"
-                  >
+              <tr key={contact._id}>
+                <td>{index + 1}</td>
+                <td>{contact.name}</td>
+                <td>{contact.email}</td>
+                <td>{contact.phone}</td>
+                <td>
+                  <Button onClick={() => updateContact(contact._id)} className="update_btn">
                     <i className="bi bi-pencil"></i>
                   </Button>
-                  </Col>
-                  <Col>
-                  
-                  <Button
-                    className="del_btn"
-                    onClick={() => delContact(contact._id)}
-                  >
-                    {" "}
+                </td>
+                <td>
+                  <Button className="del_btn" onClick={() => delContact(contact._id)}>
                     <i className="bi bi-trash"></i>
                   </Button>
-                </Col>
-              </Row>
+                </td>
+              </tr>
             ))
           ) : (
-            <Row>
-              <Col>Contacts Not Found</Col>
-            </Row>
+            <tr>
+              <td colSpan="6" className="text-center">
+                Contacts Not Found
+              </td>
+            </tr>
           )}
+        </tbody>
+      </Table>
         </Container>
       )}
     </>
