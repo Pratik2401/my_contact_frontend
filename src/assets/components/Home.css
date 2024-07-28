@@ -1,0 +1,122 @@
+.image_layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_info{
+    margin-top: 40px;
+    background: linear-gradient(120deg,#40474d 50%,#33393E);
+box-shadow:  -10px -10px 28px rgba(255, 255, 255, 0.2),
+             15px 15px 28px #1C1919;
+    color: white;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.brand_home{
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+
+}
+
+.brand_slogan{
+    font-size: 1.5rem;
+}
+
+.hero_image{
+    width: 200px;
+    height: 200px;
+    margin: 0 !important;
+}
+
+
+
+.drop_shadow{
+    border-radius: 50%;
+    padding: 10px;
+    background: #33393E;
+box-shadow:  -10px -10px 28px rgba(255, 255, 255, 0.2),
+             10px 10px 28px #1C1919;
+}
+
+.drop_shadow:hover{
+    transition: scale 0.5s;
+    scale: 1.15;
+}
+
+.inner_shadow{
+    padding: 50px;
+    background: #33393E;
+    border-radius: 50%;
+    box-shadow: inset -10px -10px 28px rgba(255, 255, 255, 0.3),
+                inset 10px 10px 28px #1C1919;
+}
+
+.start_btn{
+    border: none;
+    width: 150px !important;
+    background: transparent;
+    box-shadow:  -5px -5px 14px rgba(255, 255, 255, 0.2),
+                 5px 5px 14px #1C1919;
+}
+
+.start_btn:hover{
+    background: #33393E;
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.3),
+                inset 5px 5px 10px #1C1919;
+}
+
+.tech_heading{
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.techs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tech_stack{
+    width: 100px;
+    height: 100px;
+    margin: 0 !important;
+}
+
+.inner_shadow_tech{
+    padding: 25px;
+    background: #33393E;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 14px rgba(255, 255, 255, 0.3),
+                inset 5px 5px 14px #1C1919;
+}
+
+.drop_shadow_tech{
+    border-radius: 50%;
+    padding: 20px;
+    background: #33393E;
+    box-shadow:  -5px -5px 14px rgba(255, 255, 255, 0.2),
+             5px 5px 14px #1C1919;
+}
+
+.drop_shadow_tech:hover{
+    transition: scale 0.5s;
+    scale: 1.05;
+}
+
+.tech_align{
+    font-size: 1.3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tech_name{
+    margin-top: 10px;
+}
