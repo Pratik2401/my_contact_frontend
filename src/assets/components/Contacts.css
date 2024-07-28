@@ -89,3 +89,13 @@
     }
 }
 
+.custom_table{
+    border-color: transparent;
+}
+
+.custom_table th,
+.custom_table td {
+    color: white;
+    background-color: #33393E;
+  border-color:transparent;
+}
