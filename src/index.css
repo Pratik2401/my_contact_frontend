@@ -4,5 +4,10 @@
 }
 
 body{
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
   background-color: #33393E;
+}
+::-webkit-scrollbar {
+  display: none;
 }
