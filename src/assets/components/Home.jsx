@@ -11,6 +11,7 @@ import ExpressJs from "../images/express-js.png";
 import ReactJs from "../images/React.png";
 import NodeJs from "../images/nodejs.png";
 import Image from "react-bootstrap/Image";
+import { Link } from 'react-router-dom';
 export default function Home({ isLoggedIn, setisLoggedIn }) {
 
   return (
@@ -36,7 +37,7 @@ export default function Home({ isLoggedIn, setisLoggedIn }) {
                 ContactSphere aims to provide an elegant solution for efficient
                 contact management and connectivity.
               </p>
-              <Button className="start_btn">Get Started</Button>
+              <Button className="start_btn" as={Link} to="/login">Get Started</Button>
             </div>
           </Col>
           <Col md={6} className="image_layout">
