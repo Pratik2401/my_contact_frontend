@@ -157,7 +157,7 @@ export default function Contacts({ isLoggedIn, setisLoggedIn }) {
         api
           .delete(`/${id}`)
           .then((response) => {
-            swal("Success", "Contact deleted successfully!", "success");
+            swal("Success", "Contact deleted successfully!");
             setContacts(contacts.filter((contact) => contact._id !== id));
           })
           .catch((error) => {
@@ -174,7 +174,7 @@ export default function Contacts({ isLoggedIn, setisLoggedIn }) {
     if (isLoggedIn) {
       const getContacts = async () => {
         try {
-          const response = await api.get("/"); // Use the api instance for requests
+          const response = await api.get("/");
           setContacts(response.data);
       
         } catch (error) {
