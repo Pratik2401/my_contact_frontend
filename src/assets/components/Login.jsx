@@ -62,6 +62,7 @@ export default function Login({ isLoggedIn, setisLoggedIn, username, setusername
     e.preventDefault();
     try {
       const response = await axios.post('https://contactsphereapp.vercel.app/api/users/register', regData);
+      swal("Success", "Your Registration Is Successful");
       console.log(response.data);
     } catch (error) {
       swal("Error", error.response?.data?.message || "An error occurred", "warning");
